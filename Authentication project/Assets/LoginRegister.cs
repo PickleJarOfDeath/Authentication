@@ -19,7 +19,7 @@ public class LoginRegister : MonoBehaviour
     public UnityEvent onLoggedIn;
 
     public static LoginRegister instance;
-    private void Awake()
+    void Awake()
     {
         instance = this;
     }

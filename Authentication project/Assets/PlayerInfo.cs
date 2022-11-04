@@ -10,7 +10,7 @@ public class PlayerInfo : MonoBehaviour
     public PlayerProfileModel profile;
 
     public static PlayerInfo instance;
-    private void Awake()
+    void Awake()
     {
         instance = this;
     }
@@ -30,10 +30,9 @@ public class PlayerInfo : MonoBehaviour
             result =>
             {
                 profile = result.PlayerProfile;
-                Debug.Log("Loaded in player; " + profile.DisplayName);
+                Debug.Log("Loaded in player: " + profile.DisplayName);
             },
             error => Debug.Log(error.ErrorMessage)
-
         );
     }
 }
